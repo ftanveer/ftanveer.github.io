@@ -18,9 +18,18 @@ def hello_world():
 
 def predict():
     imagefile = request.files['imagefile'] #
-    image_path = "./test_images/" + imagefile.filename
+
+    print(type(imagefile))
+    a = type(imagefile)
+    #image_path = "./" + imagefile.filename
+    image_path = "./" + imagefile.filename
     #image_b64 = base64.b64encode(imagefile.read())
     #image_string = image_b64.decode('utf-8')
+
+
+    #my_string = base64.b64encode(img_file.read())
+
+    #print(my_string)
 
     imagefile.save(image_path)
 
