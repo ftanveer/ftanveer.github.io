@@ -6,6 +6,9 @@ import cv2
 import sklearn
 import pywt
 from wavelet import w2d
+import io
+from imageio import imread
+from PIL import Image
 
 __class_name_to_number = {}
 __class_number_to_name = {}
@@ -62,10 +65,23 @@ def load_saved_artifacts():
 def class_number_to_name(class_num):
     return __class_number_to_name[class_num]
 
+# def get_cv2_image_from_base64_string(b64str):
+#     encoded_data = b64str.split(',')[1]
+#     nparr = np.frombuffer(base64.b64decode(encoded_data), np.uint8)
+#     img = cv2.imdecode(nparr, cv2.IMREAD_COLOR)
+#     return img
+
+def stringToImage(b64string):
+    imgdata = base64.b64decode(b64string)
+    image = Image.open(io.BytesIO(imgdata))
+    return image
+
+def toRGB(image):
+    return cv2.cvtColor(np.array(image), cv2.COLOR_BGR2RGB)
+
 def get_cv2_image_from_base64_string(b64str):
-    encoded_data = b64str.split(',')[1]
-    nparr = np.frombuffer(base64.b64decode(encoded_data), np.uint8)
-    img = cv2.imdecode(nparr, cv2.IMREAD_COLOR)
+    img_PIL = stringToImage(b64str)
+    img = toRGB(img_PIL)
     return img
 
 def cropped_image_if_2_eyes(image_path, image_base64_data):
