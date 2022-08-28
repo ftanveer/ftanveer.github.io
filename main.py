@@ -5,15 +5,17 @@ import base64
 from PIL import Image
 import io
 
+
+
 app = Flask(__name__)
 
-@app.route('/classify_image', methods = ["GET"])
+@app.route('/', methods = ["GET"])
 
 def hello_world():
     return render_template('index.html')
 
 
-@app.route('/classify_image', methods = ["POST"])
+@app.route('/', methods = ["POST"])
 
 # def base64ToString(a):
 #      return base64.b64decode(a).decode('utf-8')
