@@ -9,10 +9,10 @@ import io
 
 app = Flask(__name__)
 
-# @app.route('/classify_image', methods = ["GET"])
-#
-# def hello_world():
-#     return render_template('index.html')
+@app.route('/home', methods = ["GET"])
+
+def hello_world():
+    return render_template('index.html')
 
 
 @app.route('/classify_image', methods = ["GET","POST"])
