@@ -1,4 +1,7 @@
 # ftanveer.github.io
-Hosting websites
 
-Repo is currently under progress. 
+Follow link below for deployed  website:
+
+https://ftanveer-classify-fth-main-9bebvm.streamlitapp.com/
+
+
