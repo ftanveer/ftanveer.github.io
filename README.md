@@ -1,13 +1,13 @@
 # ftanveer.github.io
 
 
-Follow link below for Data Collection file:
+Data Collection File using Bing Api:
 
-https://htmlpreview.github.io/?https://github.com/ftanveer/ftanveer.github.io/blob/main/DATA%20COLLECTION.html
+DATA COLLECTION.ipynb
 
-Follow link below for Data Processing file:
+Data Processing:
 
-https://htmlpreview.github.io/?https://github.com/ftanveer/ftanveer.github.io/blob/main/DATA%20PROCESSING.html
+DATA PROCESSING.ipynb
 
 Follow link below for deployed  website:
 
